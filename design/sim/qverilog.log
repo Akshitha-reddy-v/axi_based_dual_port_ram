@@ -1,0 +1,36 @@
+Start time: 15:51:26 on Sep 03,2025
+qverilog ../rtl/dual_port_ram.sv ../tb/tb_dual_port_ram.sv 
+-- Compiling module dual_port_ram
+-- Compiling module dual_port_mem_tb
+
+Top level modules:
+	dual_port_mem_tb
+# vsim -lib work work.dual_port_mem_tb -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dual_port_mem_tb(fast)
+# run -all
+# DATA WRITE THROUGH PORT-A, Addr=3, Data_in_A=aa
+# DATA READ THROUGH PORT-A, Addr=3, Data_out_A=aa
+# DATA WRITE THROUGH PORT-B, Addr=5, Data_in_B=ab
+# DATA READ THROUGH PORT-B, Addr=5, Data_out_B=ab
+# DATA READ THROUGH PORT-A, Addr=5, Data_out_A=ab
+# DATA READ THROUGH PORT-B, Addr=3, Data_out_B=aa
+# ** Note: $finish    : ../tb/tb_dual_port_ram.sv(158)
+#    Time: 365 ns  Iteration: 0  Instance: /dual_port_mem_tb
+# End time: 15:51:30 on Sep 03,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
